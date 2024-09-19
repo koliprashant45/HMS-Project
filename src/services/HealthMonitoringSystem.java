@@ -224,6 +224,7 @@ public class HealthMonitoringSystem implements Schedule {
 
     // Method to display all completed appointments
     public void displayCompletedAppointments() {
+        System.out.println();
         System.out.println("Completed Appointments:");
         appointments.stream()
                 .filter(a -> a.getStatus() == Status.COMPLETED)
