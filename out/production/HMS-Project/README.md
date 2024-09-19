@@ -37,13 +37,13 @@ This project is a Java-based Health Monitoring System that allows registering pa
 
 ### Output Screenshot 1: Sorting Patients by Age
 
-![Screenshot of sorted patients](E:\Hein+Fricke\HMS-Project\Screenshot\Sorting.png)
+![Screenshot of sorted patients](https://github.com/koliprashant45/HMS-Project/blob/master/Screenshot/Sorting.png)
 
 The system sorted the patients in ascending order of age.
 
 ### Output Screenshot 2: Scheduled Appointments 
 
-![Screenshot of scheduled appointments](E:\Hein+Fricke\HMS-Project\Screenshot\Scheduled+Retrieve.png)
+![Screenshot of scheduled appointments](https://github.com/koliprashant45/HMS-Project/blob/master/Screenshot/Scheduled%2BRetrieve.png)
 
 An appointment was successfully scheduled for patient ID 1 with doctor ID 2.
 

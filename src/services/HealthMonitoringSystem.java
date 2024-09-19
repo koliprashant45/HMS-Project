@@ -63,7 +63,6 @@ public class HealthMonitoringSystem implements Schedule {
                 String name = data[1];
                 int age = Integer.parseInt(data[2]);
                 String gender = data[3];
-                // Split medicalHistory on ';' and convert it to a List
                 List<String> medicalHistory = Arrays.asList(data[4].replace("[", "").replace("]", "").split(";"));
                 patients.add(new Patient(id, name, age, gender, medicalHistory));
             }
@@ -78,7 +77,6 @@ public class HealthMonitoringSystem implements Schedule {
     public void readDoctorsFromFile(String fileName) {
         try (BufferedReader br = new BufferedReader(new FileReader(fileName))) {
             String line;
-            // Skip header line
             br.readLine();
             while ((line = br.readLine()) != null) {
                 String[] data = line.split(",");
@@ -110,7 +108,6 @@ public class HealthMonitoringSystem implements Schedule {
     public void readAppointmentsFromFile(String fileName) {
         try (BufferedReader br = new BufferedReader(new FileReader(fileName))) {
             String line;
-            // Skip header line
             br.readLine();
             while ((line = br.readLine()) != null) {
                 String[] data = line.split(",");
@@ -118,7 +115,7 @@ public class HealthMonitoringSystem implements Schedule {
                 int patientId = Integer.parseInt(data[1]);
                 int doctorId = Integer.parseInt(data[2]);
                 String appointmentDate = data[3];
-                Status status = Status.valueOf(data[4].toUpperCase()); // Ensure Status is used here
+                Status status = Status.valueOf(data[4].toUpperCase());
                 appointments.add(new Appointment(appointmentId, patientId, doctorId, appointmentDate, status));
             }
         } catch (IOException e) {
